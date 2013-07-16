@@ -158,3 +158,18 @@ edu.emory.cci.bindaas.core.exception.DuplicateException: Profile[mongo] already 
 16 Jul 2013 12:10:03,550 DEBUG views.AuditView - edu.emory.cci.bindaas.webconsole.servlet.views.AuditView Initialized
 16 Jul 2013 12:10:03,751 INFO  webconsole.WebConsoleStarter - WebConsole Started
 16 Jul 2013 12:10:03,792 INFO  system.StartupEventPublisher - Bindaas Server started in [5.903] seconds 
+16 Jul 2013 12:28:54,518 DEBUG bundle.Activator - Starting Bundle [bindaas-core-api]
+16 Jul 2013 12:28:54,895 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.HistoryLog] in bundle [bindaas-core-impl]
+16 Jul 2013 12:28:54,895 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.UserRequest] in bundle [bindaas-core-impl]
+16 Jul 2013 12:28:54,896 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.VerifyEmail] in bundle [bindaas-core-impl]
+16 Jul 2013 12:28:56,176 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 12:28:57,898 INFO  cxf.ResourceScanner - Started service [Security Token Service] at [http://localhost:9099/securityTokenService]
+16 Jul 2013 12:28:57,932 INFO  cxf.ResourceScanner - Started service [Bindaas Administration Service] at [http://localhost:9099/administration]
+16 Jul 2013 12:28:57,951 INFO  cxf.ResourceScanner - Started service [Bindaas Information Service] at [http://localhost:9099/info]
+16 Jul 2013 12:28:57,963 INFO  cxf.ResourceScanner - Started service [Bindaas Execution Service] at [http://localhost:9099/services]
+16 Jul 2013 12:28:57,963 INFO  bundle.BindaasInitializer - Middleware Started
+16 Jul 2013 12:28:58,165 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 12:28:58,342 DEBUG views.DashboardView - edu.emory.cci.bindaas.webconsole.servlet.views.DashboardView Initialized
+16 Jul 2013 12:28:58,357 DEBUG views.AuditView - edu.emory.cci.bindaas.webconsole.servlet.views.AuditView Initialized
+16 Jul 2013 12:28:58,597 INFO  webconsole.WebConsoleStarter - WebConsole Started
+16 Jul 2013 12:28:58,602 INFO  system.StartupEventPublisher - Bindaas Server started in [5.483] seconds 
