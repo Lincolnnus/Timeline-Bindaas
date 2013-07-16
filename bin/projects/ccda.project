@@ -1,0 +1,468 @@
+{
+  "profiles": {
+    "allergy": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "allergy",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "allergy": {
+          "queryTemplate": "{uid:$uid$}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "allergy",
+          "timeCreated": "Tue Jul 16 11:16:18 SGT 2013",
+          "createdBy": "admin",
+          "description": "get allergies of a particular user"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Tue Jul 16 11:05:38 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Tue Jul 16 11:05:38 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Tue Jul 16 11:05:38 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Tue Jul 16 11:05:38 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "allergy",
+      "timeCreated": "Tue Jul 16 11:12:47 SGT 2013",
+      "createdBy": "admin",
+      "description": "allergies"
+    },
+    "demographics": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "demographics",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "demographics": {
+          "queryTemplate": "{uid: $uid$}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "demographics",
+          "timeCreated": "Tue Jul 16 11:16:47 SGT 2013",
+          "createdBy": "admin",
+          "description": "get demographics of a particular user"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Tue Jul 16 11:06:44 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Tue Jul 16 11:06:44 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Tue Jul 16 11:06:44 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Tue Jul 16 11:06:44 SGT 2013",
+          "createdBy": "admin",
+          "description": ""
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "demographics",
+      "timeCreated": "Tue Jul 16 11:12:58 SGT 2013",
+      "createdBy": "admin",
+      "description": "demographics"
+    },
+    "immunization": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "immunization",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "immunization": {
+          "queryTemplate": "{uid:$uid$}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "immunization",
+          "timeCreated": "Tue Jul 16 11:25:09 SGT 2013",
+          "createdBy": "admin",
+          "description": "get immunizations of a particular user"
+        },
+        "immunizationBetween": {
+          "queryTemplate": "{$and:[{\"uid\":$uid$},{\"date\": {$gte: \"$start$\", $lte: \"$end$\"}}]}   ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "start": {
+              "name": "start",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "end": {
+              "name": "end",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "immunizationBetween",
+          "timeCreated": "Tue Jul 16 11:57:12 SGT 2013",
+          "createdBy": "admin",
+          "description": "immunization between date A and date B"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Tue Jul 16 11:24:36 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Tue Jul 16 11:24:36 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Tue Jul 16 11:24:36 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Tue Jul 16 11:24:36 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "immunization",
+      "timeCreated": "Tue Jul 16 11:24:36 SGT 2013",
+      "createdBy": "admin",
+      "description": "get immunizations of a user"
+    },
+    "medication": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "medication",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "medication": {
+          "queryTemplate": "{uid:$uid$}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "medication",
+          "timeCreated": "Tue Jul 16 11:26:08 SGT 2013",
+          "createdBy": "admin",
+          "description": "get medication of a user"
+        },
+        "medicationBetween": {
+          "queryTemplate": "{$and:[{\"uid\":$uid$},{$or:[{\"date_range.end\": {$gte: \"$start$\", $lte: \"$end$\"}},{\"date_range.start\": {$gte: \"$start$\", $lte: \"$end$\"}},{$and:[{\"date_range.end\":{$lte:\"$end$\"}},{\"date_range.start\":{$gte:\"$start$\"}}]}]}]}    ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "start": {
+              "name": "start",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "end": {
+              "name": "end",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "medicationBetween",
+          "timeCreated": "Tue Jul 16 11:51:08 SGT 2013",
+          "createdBy": "admin",
+          "description": "medication between date A and date B "
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Tue Jul 16 11:25:48 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Tue Jul 16 11:25:48 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Tue Jul 16 11:25:48 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Tue Jul 16 11:25:48 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "medication",
+      "timeCreated": "Tue Jul 16 11:25:48 SGT 2013",
+      "createdBy": "admin",
+      "description": "medications of a user"
+    },
+    "lab": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "lab",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "lab": {
+          "queryTemplate": "{uid:$uid$}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "lab",
+          "timeCreated": "Tue Jul 16 11:35:22 SGT 2013",
+          "createdBy": "admin",
+          "description": "get labs of a user"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "lab",
+      "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
+      "createdBy": "admin",
+      "description": "labs of a user"
+    }
+  },
+  "params": {},
+  "name": "ccda",
+  "timeCreated": "Tue Jul 16 10:57:36 SGT 2013",
+  "createdBy": "admin",
+  "description": "GSOC 2013"
+}

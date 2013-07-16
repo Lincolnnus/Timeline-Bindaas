@@ -1,0 +1,160 @@
+16 Jul 2013 10:57:03,921 DEBUG bundle.Activator - Starting Bundle [bindaas-core-api]
+16 Jul 2013 10:57:04,418 DEBUG util.DynamicProperties - Loaded default properties
+16 Jul 2013 10:57:04,437 DEBUG util.DynamicProperties - Loaded default properties
+16 Jul 2013 10:57:04,615 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.HistoryLog] in bundle [bindaas-core-impl]
+16 Jul 2013 10:57:04,615 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.UserRequest] in bundle [bindaas-core-impl]
+16 Jul 2013 10:57:04,616 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.VerifyEmail] in bundle [bindaas-core-impl]
+16 Jul 2013 10:57:04,773 INFO  impl.FileSystemPersistenceDriverImpl - Metadata Store does not exist. Creating a new one
+16 Jul 2013 10:57:04,913 DEBUG util.DynamicObject - Reading default properties for [bindaas]
+16 Jul 2013 10:57:05,560 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 10:57:06,898 INFO  cxf.ResourceScanner - Started service [Security Token Service] at [http://localhost:9099/securityTokenService]
+16 Jul 2013 10:57:06,931 INFO  cxf.ResourceScanner - Started service [Bindaas Administration Service] at [http://localhost:9099/administration]
+16 Jul 2013 10:57:06,945 INFO  cxf.ResourceScanner - Started service [Bindaas Information Service] at [http://localhost:9099/info]
+16 Jul 2013 10:57:06,956 INFO  cxf.ResourceScanner - Started service [Bindaas Execution Service] at [http://localhost:9099/services]
+16 Jul 2013 10:57:06,957 INFO  bundle.BindaasInitializer - Middleware Started
+16 Jul 2013 10:57:06,986 DEBUG util.DynamicProperties - Loaded default properties
+16 Jul 2013 10:57:06,989 DEBUG util.DynamicProperties - Loaded default properties
+16 Jul 2013 10:57:06,991 DEBUG util.DynamicProperties - Loaded default properties
+16 Jul 2013 10:57:07,136 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 10:57:07,272 DEBUG views.DashboardView - edu.emory.cci.bindaas.webconsole.servlet.views.DashboardView Initialized
+16 Jul 2013 10:57:07,286 DEBUG views.AuditView - edu.emory.cci.bindaas.webconsole.servlet.views.AuditView Initialized
+16 Jul 2013 10:57:07,449 DEBUG util.DynamicObject - Reading default properties for [bindaas.adminconsole]
+16 Jul 2013 10:57:07,467 INFO  webconsole.WebConsoleStarter - WebConsole Started
+16 Jul 2013 10:57:07,482 INFO  system.StartupEventPublisher - Bindaas Server started in [10.471] seconds 
+16 Jul 2013 10:57:36,962 DEBUG impl.ManagementTasksImpl - Workspace created
+{
+  "profiles": {},
+  "params": {},
+  "name": "ccda",
+  "timeCreated": "Tue Jul 16 10:57:36 SGT 2013",
+  "createdBy": "admin",
+  "description": "GSOC 2013"
+}
+16 Jul 2013 10:59:17,505 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 10:59:17,505 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:01:33,516 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:01:33,519 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:05:12,730 ERROR action.CreateProfile - edu.emory.cci.bindaas.core.exception.DuplicateException: Profile[mongo] already exist
+16 Jul 2013 11:05:12,732 ERROR webconsole.ErrorView - Server Error - Request could not be served
+edu.emory.cci.bindaas.core.exception.DuplicateException: Profile[mongo] already exist
+	at edu.emory.cci.bindaas.core.impl.ManagementTasksImpl.createProfile(ManagementTasksImpl.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.eclipse.gemini.blueprint.service.importer.support.internal.aop.ServiceInvoker.doInvoke(ServiceInvoker.java:56)
+	at org.eclipse.gemini.blueprint.service.importer.support.internal.aop.ServiceInvoker.invoke(ServiceInvoker.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:132)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.eclipse.gemini.blueprint.service.util.internal.aop.ServiceTCCLInterceptor.invokeUnprivileged(ServiceTCCLInterceptor.java:70)
+	at org.eclipse.gemini.blueprint.service.util.internal.aop.ServiceTCCLInterceptor.invoke(ServiceTCCLInterceptor.java:53)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.eclipse.gemini.blueprint.service.importer.support.LocalBundleContextAdvice.invoke(LocalBundleContextAdvice.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:132)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at com.sun.proxy.$Proxy65.createProfile(Unknown Source)
+	at edu.emory.cci.bindaas.webconsole.servlet.action.CreateProfile.doCreateProfile(CreateProfile.java:177)
+	at edu.emory.cci.bindaas.webconsole.servlet.action.CreateProfile.handleRequest(CreateProfile.java:99)
+	at edu.emory.cci.bindaas.webconsole.MainController.handleRequest(MainController.java:71)
+	at edu.emory.cci.bindaas.webconsole.MainController.doPost(MainController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:595)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.doHandle(ServletHandler.java:96)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:79)
+	at org.apache.felix.http.base.internal.dispatch.ServletPipeline.handle(ServletPipeline.java:42)
+	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:49)
+	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
+	at edu.emory.cci.bindaas.webconsole.LoginAction.doFilter(LoginAction.java:126)
+	at org.apache.felix.http.base.internal.handler.FilterHandler.doHandle(FilterHandler.java:88)
+	at org.apache.felix.http.base.internal.handler.FilterHandler.handle(FilterHandler.java:76)
+	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:47)
+	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
+	at org.apache.felix.http.base.internal.dispatch.FilterPipeline.dispatch(FilterPipeline.java:48)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:39)
+	at org.apache.felix.http.base.internal.DispatcherServlet.service(DispatcherServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:390)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:943)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+16 Jul 2013 11:05:38,254 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:05:38,254 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:06:44,689 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:06:44,689 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:07:13,273 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:07:13,274 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:12:41,178 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:12:41,178 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:12:47,836 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:12:47,836 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:12:58,138 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:12:58,138 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:16:18,449 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:16:18,450 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:16:47,017 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:16:47,017 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:18:28,737 ERROR impl.ExecutionServiceImpl - edu.emory.cci.bindaas.core.exception.NotFoundException: Cannot find Profile[mongo]
+16 Jul 2013 11:18:35,841 ERROR impl.ExecutionServiceImpl - edu.emory.cci.bindaas.core.exception.NotFoundException: Cannot find Profile[mongo]
+16 Jul 2013 11:24:36,833 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:24:36,834 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:25:09,998 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:25:09,999 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:25:48,946 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:25:48,947 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:26:08,830 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:26:08,830 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:34:54,005 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:34:54,005 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+16 Jul 2013 11:35:22,800 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:35:22,800 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:40:38,426 DEBUG bundle.Activator - Starting Bundle [bindaas-core-api]
+16 Jul 2013 11:40:38,833 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.HistoryLog] in bundle [bindaas-core-impl]
+16 Jul 2013 11:40:38,834 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.UserRequest] in bundle [bindaas-core-impl]
+16 Jul 2013 11:40:38,835 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.VerifyEmail] in bundle [bindaas-core-impl]
+16 Jul 2013 11:40:40,074 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 11:40:41,695 INFO  cxf.ResourceScanner - Started service [Security Token Service] at [http://localhost:9099/securityTokenService]
+16 Jul 2013 11:40:41,729 INFO  cxf.ResourceScanner - Started service [Bindaas Administration Service] at [http://localhost:9099/administration]
+16 Jul 2013 11:40:41,746 INFO  cxf.ResourceScanner - Started service [Bindaas Information Service] at [http://localhost:9099/info]
+16 Jul 2013 11:40:41,759 INFO  cxf.ResourceScanner - Started service [Bindaas Execution Service] at [http://localhost:9099/services]
+16 Jul 2013 11:40:41,759 INFO  bundle.BindaasInitializer - Middleware Started
+16 Jul 2013 11:40:41,964 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 11:40:42,142 DEBUG views.DashboardView - edu.emory.cci.bindaas.webconsole.servlet.views.DashboardView Initialized
+16 Jul 2013 11:40:42,158 DEBUG views.AuditView - edu.emory.cci.bindaas.webconsole.servlet.views.AuditView Initialized
+16 Jul 2013 11:40:42,348 INFO  webconsole.WebConsoleStarter - WebConsole Started
+16 Jul 2013 11:40:42,406 INFO  system.StartupEventPublisher - Bindaas Server started in [5.441] seconds 
+16 Jul 2013 11:41:42,509 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:41:42,510 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:51:08,483 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:51:08,484 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 11:57:12,004 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+16 Jul 2013 11:57:12,005 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+16 Jul 2013 12:09:59,611 DEBUG bundle.Activator - Starting Bundle [bindaas-core-api]
+16 Jul 2013 12:09:59,828 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.HistoryLog] in bundle [bindaas-core-impl]
+16 Jul 2013 12:09:59,829 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.UserRequest] in bundle [bindaas-core-impl]
+16 Jul 2013 12:09:59,841 DEBUG hibernateh2.HibernateEntityScanner - Discovered Hibernate-Entity class [edu.emory.cci.bindaas.core.model.hibernate.VerifyEmail] in bundle [bindaas-core-impl]
+16 Jul 2013 12:10:01,209 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 12:10:02,978 INFO  cxf.ResourceScanner - Started service [Security Token Service] at [http://localhost:9099/securityTokenService]
+16 Jul 2013 12:10:03,016 INFO  cxf.ResourceScanner - Started service [Bindaas Administration Service] at [http://localhost:9099/administration]
+16 Jul 2013 12:10:03,032 INFO  cxf.ResourceScanner - Started service [Bindaas Information Service] at [http://localhost:9099/info]
+16 Jul 2013 12:10:03,046 INFO  cxf.ResourceScanner - Started service [Bindaas Execution Service] at [http://localhost:9099/services]
+16 Jul 2013 12:10:03,046 INFO  bundle.BindaasInitializer - Middleware Started
+16 Jul 2013 12:10:03,286 WARN  server.RealmVerifier - RP discovery / realm validation disabled; 
+16 Jul 2013 12:10:03,536 DEBUG views.DashboardView - edu.emory.cci.bindaas.webconsole.servlet.views.DashboardView Initialized
+16 Jul 2013 12:10:03,550 DEBUG views.AuditView - edu.emory.cci.bindaas.webconsole.servlet.views.AuditView Initialized
+16 Jul 2013 12:10:03,751 INFO  webconsole.WebConsoleStarter - WebConsole Started
+16 Jul 2013 12:10:03,792 INFO  system.StartupEventPublisher - Bindaas Server started in [5.903] seconds 
