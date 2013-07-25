@@ -458,6 +458,314 @@
       "timeCreated": "Tue Jul 16 11:34:54 SGT 2013",
       "createdBy": "admin",
       "description": "labs of a user"
+    },
+    "problem": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "problem",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "problem": {
+          "queryTemplate": "{uid:$uid$} ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "problem",
+          "timeCreated": "Fri Jul 26 00:08:02 SGT 2013",
+          "createdBy": "admin",
+          "description": "get problems of uid"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Fri Jul 26 00:06:21 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Fri Jul 26 00:06:21 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Fri Jul 26 00:06:21 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Fri Jul 26 00:06:21 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "problem",
+      "timeCreated": "Fri Jul 26 00:06:21 SGT 2013",
+      "createdBy": "admin",
+      "description": "problems"
+    },
+    "procedure": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "procedure",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "procedure": {
+          "queryTemplate": "{uid:$uid$} ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "procedure",
+          "timeCreated": "Fri Jul 26 00:08:22 SGT 2013",
+          "createdBy": "admin",
+          "description": "get procedures of uid "
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Fri Jul 26 00:06:47 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Fri Jul 26 00:06:47 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Fri Jul 26 00:06:47 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Fri Jul 26 00:06:47 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "procedure",
+      "timeCreated": "Fri Jul 26 00:06:47 SGT 2013",
+      "createdBy": "admin",
+      "description": "procedures"
+    },
+    "vital": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "vital",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "vital": {
+          "queryTemplate": "{uid:$uid$} ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "vital",
+          "timeCreated": "Fri Jul 26 00:08:36 SGT 2013",
+          "createdBy": "admin",
+          "description": "get vitals of uid"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Fri Jul 26 00:07:04 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Fri Jul 26 00:07:04 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Fri Jul 26 00:07:04 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Fri Jul 26 00:07:04 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "vital",
+      "timeCreated": "Fri Jul 26 00:07:04 SGT 2013",
+      "createdBy": "admin",
+      "description": "vitals"
+    },
+    "encounter": {
+      "dataSource": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "ccda",
+        "collection": "encounter",
+        "initialize": true
+      },
+      "queryEndpoints": {
+        "encounter": {
+          "queryTemplate": "{uid:$uid$} ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "uid": {
+              "name": "uid",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "encounter",
+          "timeCreated": "Fri Jul 26 00:08:59 SGT 2013",
+          "createdBy": "admin",
+          "description": "get encounters of uid"
+        }
+      },
+      "deleteEndpoints": {},
+      "submitEndpoints": {
+        "csvFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "CSV_FILE"
+          },
+          "name": "csvFile",
+          "timeCreated": "Fri Jul 26 00:07:24 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongoFile": {
+          "type": "MULTIPART",
+          "properties": {
+            "inputType": "JSON_FILE"
+          },
+          "name": "mongoFile",
+          "timeCreated": "Fri Jul 26 00:07:24 SGT 2013",
+          "createdBy": "admin"
+        },
+        "csv": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "CSV"
+          },
+          "name": "csv",
+          "timeCreated": "Fri Jul 26 00:07:24 SGT 2013",
+          "createdBy": "admin"
+        },
+        "mongo": {
+          "type": "FORM_DATA",
+          "properties": {
+            "inputType": "JSON"
+          },
+          "name": "mongo",
+          "timeCreated": "Fri Jul 26 00:07:24 SGT 2013",
+          "createdBy": "admin"
+        }
+      },
+      "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
+      "providerVersion": 1,
+      "name": "encounter",
+      "timeCreated": "Fri Jul 26 00:07:24 SGT 2013",
+      "createdBy": "admin",
+      "description": "encounters"
     }
   },
   "params": {},
