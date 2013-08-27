@@ -1,0 +1,24 @@
+{
+  "roleRules": [
+    {
+      "users": [
+        "nadirsaghar",
+        "nadirsagha",
+        "nsaghar",
+        "nadirsaghar@gmail.com"
+      ],
+      "roles": [
+        "admin"
+      ]
+    }
+  ],
+  "resourceRules": [
+    {
+      "resource": "/",
+      "logic": "CONTAINS",
+      "allowedRolesOrUsers": [
+        "admin"
+      ]
+    }
+  ]
+}

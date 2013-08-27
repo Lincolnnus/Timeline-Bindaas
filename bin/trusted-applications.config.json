@@ -1,0 +1,9 @@
+{
+  "trustedApplications": [
+    {
+      "applicationId": "demo-id",
+      "applicationKey": "demo-secret-key",
+      "name": "Demo Application"
+    }
+  ]
+}

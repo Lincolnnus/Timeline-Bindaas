@@ -1,0 +1,6 @@
+{
+  "uniqueIdentifier": "85593d72-c361-4911-9071-9d9f089de479",
+  "enable": true,
+  "serverUrl": "http://ivi02.cci.emory.edu:3000/heartbeatMonitorService/send",
+  "frequency": 10
+}
