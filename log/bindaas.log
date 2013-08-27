@@ -375,3 +375,129 @@ Caused by: java.io.IOException: Workspace metadata not found. name=[ccda]
 	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599)
 	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379)
 	... 60 more
+27 Aug 2013 13:55:34,426 ERROR impl.FileSystemPersistenceDriverImpl - Failed to load project [ccda]
+java.util.concurrent.ExecutionException: java.io.IOException: Workspace metadata not found. name=[ccda]
+	at com.google.common.util.concurrent.AbstractFuture$Sync.getValue(AbstractFuture.java:306)
+	at com.google.common.util.concurrent.AbstractFuture$Sync.get(AbstractFuture.java:293)
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:116)
+	at com.google.common.util.concurrent.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:135)
+	at com.google.common.cache.LocalCache$Segment.getAndRecordStats(LocalCache.java:2410)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2380)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4000)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874)
+	at edu.emory.cci.bindaas.core.impl.FileSystemPersistenceDriverImpl.loadAllWorkspaces(FileSystemPersistenceDriverImpl.java:166)
+	at edu.emory.cci.bindaas.core.impl.ManagementTasksImpl.listWorkspaces(ManagementTasksImpl.java:770)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.eclipse.gemini.blueprint.service.importer.support.internal.aop.ServiceInvoker.doInvoke(ServiceInvoker.java:56)
+	at org.eclipse.gemini.blueprint.service.importer.support.internal.aop.ServiceInvoker.invoke(ServiceInvoker.java:60)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:132)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.eclipse.gemini.blueprint.service.util.internal.aop.ServiceTCCLInterceptor.invokeUnprivileged(ServiceTCCLInterceptor.java:70)
+	at org.eclipse.gemini.blueprint.service.util.internal.aop.ServiceTCCLInterceptor.invoke(ServiceTCCLInterceptor.java:53)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.eclipse.gemini.blueprint.service.importer.support.LocalBundleContextAdvice.invoke(LocalBundleContextAdvice.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:132)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at com.sun.proxy.$Proxy66.listWorkspaces(Unknown Source)
+	at edu.emory.cci.bindaas.webconsole.servlet.views.DashboardView.handleRequest(DashboardView.java:78)
+	at edu.emory.cci.bindaas.webconsole.MainController.handleRequest(MainController.java:71)
+	at edu.emory.cci.bindaas.webconsole.MainController.doGet(MainController.java:42)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:575)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.doHandle(ServletHandler.java:96)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:79)
+	at org.apache.felix.http.base.internal.dispatch.ServletPipeline.handle(ServletPipeline.java:42)
+	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:49)
+	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
+	at edu.emory.cci.bindaas.webconsole.LoginAction.doFilter(LoginAction.java:126)
+	at org.apache.felix.http.base.internal.handler.FilterHandler.doHandle(FilterHandler.java:88)
+	at org.apache.felix.http.base.internal.handler.FilterHandler.handle(FilterHandler.java:76)
+	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:47)
+	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
+	at org.apache.felix.http.base.internal.dispatch.FilterPipeline.dispatch(FilterPipeline.java:48)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:39)
+	at org.apache.felix.http.base.internal.DispatcherServlet.service(DispatcherServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:390)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:926)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.io.IOException: Workspace metadata not found. name=[ccda]
+	at edu.emory.cci.bindaas.core.impl.FileSystemPersistenceDriverImpl.loadWorkspaceByName(FileSystemPersistenceDriverImpl.java:185)
+	at edu.emory.cci.bindaas.core.impl.FileSystemPersistenceDriverImpl$2.load(FileSystemPersistenceDriverImpl.java:131)
+	at edu.emory.cci.bindaas.core.impl.FileSystemPersistenceDriverImpl$2.load(FileSystemPersistenceDriverImpl.java:126)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379)
+	... 60 more
+27 Aug 2013 13:55:55,338 DEBUG impl.ManagementTasksImpl - Workspace created
+{
+  "profiles": {},
+  "params": {},
+  "name": "ccda",
+  "timeCreated": "Tue Aug 27 13:55:55 SGT 2013",
+  "createdBy": "admin",
+  "description": "GSOC 2013 Timeline Project Bindaas Part"
+}
+27 Aug 2013 13:58:48,638 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 13:58:48,639 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 13:59:52,691 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 13:59:52,694 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:00:13,077 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:00:13,077 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:00:33,121 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:00:33,121 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:00:44,715 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:00:44,715 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:01:08,089 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:01:08,089 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:01:26,227 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:01:26,232 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:01:59,497 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:01:59,498 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:02:18,885 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:02:18,885 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:02:36,290 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:02:36,290 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:02:54,409 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:02:54,409 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:03:20,648 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:03:20,648 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:03:40,069 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:03:40,069 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:03:56,131 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:03:56,132 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:04:11,491 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:04:11,491 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:04:51,535 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:04:51,535 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:05:06,453 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:05:06,453 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:06:03,426 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:06:03,426 DEBUG impl.ManagementTasksImpl - Provider found. Performing validation and initialization
+27 Aug 2013 14:06:18,691 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:06:18,691 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:06:52,470 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:06:52,470 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
+27 Aug 2013 14:07:25,294 DEBUG impl.ManagementTasksImpl - Locating Provider id=[edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider] and version=[1]
+27 Aug 2013 14:07:25,294 DEBUG impl.ManagementTasksImpl - Provider found. Extracting QueryHandler
